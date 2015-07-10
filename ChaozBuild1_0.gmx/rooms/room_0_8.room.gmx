@@ -61,30 +61,6 @@
     <instance objName="obj_wall" x="2880" y="2272" name="inst_80FEB7F5" locked="0" code="" scaleX="2.5" scaleY="2.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="3296" y="2272" name="inst_4C2A1B4C" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="3040" y="2720" name="inst_19D27D64" locked="0" code="" scaleX="3.5" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="obj_doorDown1" x="3104" y="3040" name="inst_68EE87E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_doorDown2" x="3104" y="3040" name="inst_B7DE9F7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="2528" y="2464" name="inst_603AE842" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="2592" y="2464" name="inst_645C9196" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="2528" y="2656" name="inst_4B5AC321" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="2592" y="2656" name="inst_4C03CA50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3040" y="3104" name="inst_9FBD42EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3040" y="3040" name="inst_C39D991B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3232" y="3104" name="inst_7FB8D157" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3232" y="3040" name="inst_81F73187" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3680" y="2464" name="inst_836383AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3744" y="2464" name="inst_6D7994E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3680" y="2656" name="inst_6F3BAFE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3744" y="2656" name="inst_B9520C7E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3040" y="1920" name="inst_0001718A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3040" y="1984" name="inst_6104EE3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3232" y="1920" name="inst_ED465987" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="3232" y="1984" name="inst_A9E8C291" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_doorLeft1" x="2560" y="2528" name="inst_12F0066C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_doorLeft2" x="2560" y="2528" name="inst_BADE846C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_doorUp1" x="3104" y="1984" name="inst_4D121CA8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_doorUp2" x="3104" y="1984" name="inst_FDA02051" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_doorRight2" x="3648" y="2528" name="inst_29ED0EF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_doorRight1" x="3648" y="2528" name="inst_05F10577" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
