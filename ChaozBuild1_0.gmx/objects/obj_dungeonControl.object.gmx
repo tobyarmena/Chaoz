@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_dungeonGen()
+            <string>firstTouch=false
+activatedoor=false
+scr_dungeonGen()
 global.currentDungeon = 0
 
 /*
@@ -121,12 +123,13 @@ global.scale = 1
             <string>
 playerPos = ds_grid_set(global.playerGrid,global.playerPos_x,global.playerPos_y,1)
 
-up = obj_player.door_Up == true &amp;&amp; keyboard_check_pressed(ord('E'))
-down = obj_player.door_Down == true &amp;&amp; keyboard_check_pressed(ord('E'))
-left = obj_player.door_Left == true &amp;&amp; keyboard_check_pressed(ord('E'))
-right = obj_player.door_Right == true &amp;&amp; keyboard_check_pressed(ord('E'))
+up = obj_player.door_Up == true &amp;&amp; activatedoor==false 
+down = obj_player.door_Down == true &amp;&amp; activatedoor==false
+left = obj_player.door_Left == true &amp;&amp; activatedoor==false
+right = obj_player.door_Right == true &amp;&amp; activatedoor==false
 
-
+if global.firstTouch == false
+{
 //update player position
 if ds_grid_get(global.map,global.playerPos_x,global.playerPos_y -1) &gt; 0 &amp;&amp; up &amp;&amp; !instance_exists(par_enemies)
 {
@@ -134,6 +137,7 @@ if ds_grid_get(global.map,global.playerPos_x,global.playerPos_y -1) &gt; 0 &amp;
     xincrease = 0
     yincrease = -1
     spawn = "down"
+    activatedoor=true
 }
 if ds_grid_get(global.map,global.playerPos_x,global.playerPos_y +1) &gt; 0 &amp;&amp; down &amp;&amp; !instance_exists(par_enemies)
 {
@@ -141,6 +145,7 @@ if ds_grid_get(global.map,global.playerPos_x,global.playerPos_y +1) &gt; 0 &amp;
     xincrease = 0
     yincrease = 1
     spawn = "up"
+    activatedoor=true
 }
 if ds_grid_get(global.map,global.playerPos_x-1,global.playerPos_y) &gt; 0 &amp;&amp; left &amp;&amp; !instance_exists(par_enemies)
 {
@@ -148,6 +153,7 @@ if ds_grid_get(global.map,global.playerPos_x-1,global.playerPos_y) &gt; 0 &amp;&
     xincrease = -1
     yincrease = 0
     spawn = "right"
+    activatedoor=true
 }
 if ds_grid_get(global.map,global.playerPos_x+1,global.playerPos_y) &gt; 0 &amp;&amp; right &amp;&amp; !instance_exists(par_enemies)
 {
@@ -155,14 +161,38 @@ if ds_grid_get(global.map,global.playerPos_x+1,global.playerPos_y) &gt; 0 &amp;&
     xincrease = 1
     yincrease = 0
     spawn = "left"
+    activatedoor=true
   
 }
-
+}
 //Using the updated information, teleport player to the next room with a fading transition
 scr_faderoom(setRoom[global.currentDungeon,global.playerPos_y],xincrease,yincrease,spawn)
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>activatedoor=false
 </string>
           </argument>
         </arguments>
@@ -185,7 +215,7 @@ scr_faderoom(setRoom[global.currentDungeon,global.playerPos_y],xincrease,yincrea
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>activatedoor=false
 if visited[global.playerPos_x,global.playerPos_y] = false
 {
 visited[global.playerPos_x,global.playerPos_y] = true;
@@ -249,6 +279,8 @@ if instance_number(obj_randomchestspawn)&gt;=chestnumber
     }
 
 }
+
+
 </string>
           </argument>
         </arguments>
@@ -281,6 +313,8 @@ draw_rectangle(view_xview[0],view_yview[0],view_xview[0]+view_wview[0],view_yvie
 draw_set_alpha(1)
 
 //mp_grid_draw(global.grid) 
+if global.firstTouch == false
+draw_text(view_xview+400,view_yview+400,"false")
 </string>
           </argument>
         </arguments>

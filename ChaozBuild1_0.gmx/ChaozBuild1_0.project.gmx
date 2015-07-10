@@ -10,6 +10,7 @@
       <sprite>sprites\spr_player</sprite>
       <sprites name="normal">
         <sprite>sprites\spr_normal_body</sprite>
+        <sprite>sprites\spr_normal_skulll_outline</sprite>
         <sprite>sprites\spr_normal_skull</sprite>
         <sprite>sprites\spr_normal_arm</sprite>
         <sprite>sprites\spr_normal_legs</sprite>
@@ -22,9 +23,7 @@
         <sprite>sprites\spr_minigun_part</sprite>
         <sprite>sprites\spr_minigun_pro</sprite>
         <sprite>sprites\spr_ice_arm</sprite>
-        <sprite>sprites\spr_wisp_arm</sprite>
         <sprite>sprites\spr_ice_pro</sprite>
-        <sprite>sprites\spr_wisp</sprite>
       </sprites>
       <sprites name="cores">
         <sprite>sprites\spr_core1</sprite>
@@ -50,7 +49,6 @@
       <sprite>sprites\spr_magma_pu</sprite>
       <sprite>sprites\spr_minigun_pu</sprite>
       <sprite>sprites\spr_ice_pu</sprite>
-      <sprite>sprites\spr_wisp_pu</sprite>
       <sprite>sprites\spr_skull_marked_pu</sprite>
       <sprite>sprites\spr_skull_eye_pu</sprite>
       <sprite>sprites\spr_skull_hell_pu</sprite>
@@ -79,6 +77,12 @@
         <sprite>sprites\spr_doorRight</sprite>
         <sprite>sprites\spr_doorLeft</sprite>
         <sprite>sprites\spr_door</sprite>
+        <sprite>sprites\spr_door1</sprite>
+        <sprite>sprites\spr_LeftDoor1</sprite>
+        <sprite>sprites\spr_RightDoor1</sprite>
+        <sprite>sprites\spr_door2</sprite>
+        <sprite>sprites\spr_LeftDoor2</sprite>
+        <sprite>sprites\spr_RightDoor2</sprite>
       </sprites>
       <sprite>sprites\spr_wall</sprite>
     </sprites>
@@ -89,10 +93,15 @@
     <sprite>sprites\spr_chestbase</sprite>
     <sprite>sprites\spr_randchestspawn</sprite>
     <sprite>sprites\spr_chestcover</sprite>
+    <sprite>sprites\spr_wisp</sprite>
+    <sprite>sprites\spr_wisp_arm</sprite>
+    <sprite>sprites\spr_wisp_pu</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
+    <background>background\background2</background>
+    <background>background\background3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -219,9 +228,9 @@
     </objects>
     <objects name="spells">
       <object>objects\obj_magma_pro</object>
-      <object>objects\obj_wisp_pro</object>
       <object>objects\obj_ice_pro</object>
       <object>objects\obj_minigun_pro</object>
+      <object>objects\obj_wisp_pro</object>
     </objects>
     <objects name="Lighting">
       <object>objects\obj_lightingControl</object>
@@ -255,6 +264,14 @@
       <object>objects\obj_doorDown</object>
       <object>objects\obj_doorLeft</object>
       <object>objects\obj_doorRight</object>
+      <object>objects\obj_doorUp2</object>
+      <object>objects\obj_doorUp1</object>
+      <object>objects\obj_doorRight2</object>
+      <object>objects\obj_doorLeft2</object>
+      <object>objects\obj_doorLeft1</object>
+      <object>objects\obj_doorRight1</object>
+      <object>objects\obj_doorDown1</object>
+      <object>objects\obj_doorDown2</object>
     </objects>
     <object>objects\obj_dmg</object>
     <object>objects\obj_portal</object>
@@ -264,6 +281,7 @@
     <object>objects\obj_chest_base</object>
     <object>objects\obj_randomchestspawn</object>
     <object>objects\obj_parent_chest</object>
+    <object>objects\obj_door2</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Dungeon 0">

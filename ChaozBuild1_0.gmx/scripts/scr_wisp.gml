@@ -18,8 +18,8 @@ if mouse_check_button(button)&& delay=false
         {
         phy_bullet = true;
         direction = ind.aimdir;
-        ldx = lengthdir_x(10000,ind.aimdir)
-        ldy = lengthdir_y(10000,ind.aimdir)
+        ldx = lengthdir_x(1000,ind.aimdir)
+        ldy = lengthdir_y(1000,ind.aimdir)
         physics_apply_impulse(x,y,ldx,ldy)
         }
     projectile2=instance_create(xx,yy,obj_wisp_pro)
@@ -27,8 +27,8 @@ if mouse_check_button(button)&& delay=false
         {
         phy_bullet = true;
         direction = ind.aimdir;
-        ldx = lengthdir_x(10000,ind.aimdir+15)
-        ldy = lengthdir_y(10000,ind.aimdir+15)
+        ldx = lengthdir_x(1000,ind.aimdir+90)
+        ldy = lengthdir_y(1000,ind.aimdir+90)
         physics_apply_impulse(x,y,ldx,ldy)
         }
     projectile3=instance_create(xx,yy,obj_wisp_pro)
@@ -36,8 +36,8 @@ if mouse_check_button(button)&& delay=false
         {
         phy_bullet = true;
         direction = ind.aimdir;
-        ldx = lengthdir_x(10000,ind.aimdir-15)
-        ldy = lengthdir_y(10000,ind.aimdir-15)
+        ldx = lengthdir_x(1000,ind.aimdir-90)
+        ldy = lengthdir_y(1000,ind.aimdir-90)
         physics_apply_impulse(x,y,ldx,ldy)
         }
     }

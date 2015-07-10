@@ -113,9 +113,9 @@ global.items[1,5] = scr_minigun
 
 //Triple Icicle Spell
 global.items[2,0] = "Ymir"  
-global.items[2,1] = 1         
+global.items[2,1] = 1             
 global.items[2,2] = spr_ice_arm
-global.items[2,3] = "Let it go. #Cast 3 icicles with a spread. #Base damage: 30"          
+global.items[2,3] = "Let it go. #Cast 3 icicles with a spread. #Base damage: 25"          
 global.items[2,4] = spr_ice_pu
 global.items[2,5] = scr_ice
 
@@ -152,12 +152,13 @@ global.items[6,4] = spr_skull_broken_pu
 global.items[6,5] = scr_skull_broken
 
 //Wisp Spell
-global.items[7,0] = "Wisps"  
-global.items[7,1] = 1         
+global.items[7,0] = "The Wisp"  
+global.items[7,1] = 1             
 global.items[7,2] = spr_wisp_arm
-global.items[7,3] = "Let it go. #Cast 3 icicles with a spread. #Base damage: 25"          
+global.items[7,3] = "Projectiles follow a guided path"           
 global.items[7,4] = spr_wisp_pu
 global.items[7,5] = scr_wisp
+
 </string>
           </argument>
         </arguments>

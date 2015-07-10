@@ -54,7 +54,7 @@ path = path_add();
             <string>//movement
 if instance_exists(par_enemies) &amp;&amp; distance_to_object(par_enemies) &lt; 500
     {
-scr_follow(instance_nearest(x,y,par_enemies),0,10000);
+scr_follow(instance_nearest(x,y,par_enemies),0,8000);
 }
 
 part_particles_create(global.magma3_sys,x+irandom_range(-5,5),y+irandom_range(-5,5),global.magma3_pt,10)
@@ -65,7 +65,7 @@ if distance_to_object(obj_player)&gt;3000{instance_destroy();}
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_parent_wall">
+    <event eventtype="4" ename="obj_wall">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -82,10 +82,7 @@ if distance_to_object(obj_player)&gt;3000{instance_destroy();}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>part_particles_create(global.magma2_sys,phy_collision_x,phy_collision_y,global.magma2_sys,15)
-part_particles_create(global.magma_sys,phy_collision_x,phy_collision_y,global.magma_pt,30)
-instance_destroy();
-
+            <string>//
 </string>
           </argument>
         </arguments>
