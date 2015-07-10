@@ -27,23 +27,23 @@
             <kind>1</kind>
             <string>if global.spawn == "left"
     {
-    spawnpoint1.x = obj_doorLeft.x + 128
+    spawnpoint1.x = obj_doorLeft.x + 32
     spawnpoint1.y = obj_doorLeft.y + 64
     }
 if global.spawn == "right"
     {
-    spawnpoint1.x = obj_doorRight.x - 64
+    spawnpoint1.x = obj_doorRight.x + 32
     spawnpoint1.y = obj_doorRight.y + 64
     }
 if global.spawn == "up"
     {
     spawnpoint1.x = obj_doorUp.x + 64
-    spawnpoint1.y = obj_doorUp.y + 128
+    spawnpoint1.y = obj_doorUp.y + 32
     }
 if global.spawn == "down"
     {
     spawnpoint1.x = obj_doorDown.x + 64
-    spawnpoint1.y = obj_doorDown.y - 64
+    spawnpoint1.y = obj_doorDown.y + 32
     }
 </string>
           </argument>

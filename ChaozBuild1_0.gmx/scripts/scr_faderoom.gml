@@ -15,6 +15,7 @@ if(alpha==1)
         setRoom[global.playerPos_x,global.playerPos_y] = room_duplicate(global.room_value[global.currentDungeon,nextRoom])
     //visited[global.playerPos_x,global.playerPos_y] = true;
     room_goto(setRoom[global.playerPos_x,global.playerPos_y])
+    alarm[0]=10
     fade = -1;
     //global.scale += 0.05
     global.firstTouch = true

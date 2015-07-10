@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_main1</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Player">
       <sprite>sprites\spr_player</sprite>
@@ -74,8 +76,8 @@
       <sprites name="doors">
         <sprite>sprites\spr_doorUp</sprite>
         <sprite>sprites\spr_doorDown</sprite>
-        <sprite>sprites\spr_doorRight</sprite>
         <sprite>sprites\spr_doorLeft</sprite>
+        <sprite>sprites\spr_doorRight</sprite>
         <sprite>sprites\spr_door</sprite>
         <sprite>sprites\spr_door1</sprite>
         <sprite>sprites\spr_LeftDoor1</sprite>
@@ -102,6 +104,8 @@
     <background>background\background1</background>
     <background>background\background2</background>
     <background>background\background3</background>
+    <background>background\background4</background>
+    <background>background\Cover</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -282,6 +286,7 @@
     <object>objects\obj_randomchestspawn</object>
     <object>objects\obj_parent_chest</object>
     <object>objects\obj_door2</object>
+    <object>objects\obj_music</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Dungeon 0">

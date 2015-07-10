@@ -82,7 +82,7 @@ if distance_to_object(obj_player)&gt;3000{instance_destroy();}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>

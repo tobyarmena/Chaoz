@@ -15,7 +15,7 @@ if mouse_check_button(button)
     }
 else
     {
-    spd -= 0.03
+    spd -= 0.015
     if spd<0{spd = 0;}
     }
 image_speed = spd;
