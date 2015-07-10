@@ -97,7 +97,6 @@ spawn = ""
 //Variable for difficulty scaling
 global.scale = 1
 
-
 </string>
           </argument>
         </arguments>
@@ -337,6 +336,8 @@ draw_set_alpha(1)
 //mp_grid_draw(global.grid) 
 if global.firstTouch == false
 draw_text(view_xview+400,view_yview+400,"false")
+
+
 </string>
           </argument>
         </arguments>
