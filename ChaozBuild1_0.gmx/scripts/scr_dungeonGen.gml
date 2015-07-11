@@ -4,8 +4,10 @@ randomize()
 height = 20
 width = 20
 
-amount = 25
+amount = 40
 amountbranch=5
+
+distancetoendlimit = 10
 
 dif=0
 
@@ -128,8 +130,13 @@ while(i<=amount&&j<=amount*4)
     }
     j++
 }
+if ds_grid_value_disk_exists(global.map, global.startx, global.starty, distancetoendlimit, 2)
+    scr_dungeonGen()
+
 
 global.playerGrid = ds_grid_create(height,width)
 
 global.playerPos_x = global.startx
 global.playerPos_y = global.starty
+
+

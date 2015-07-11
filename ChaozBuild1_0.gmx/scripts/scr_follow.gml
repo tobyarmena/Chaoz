@@ -6,7 +6,7 @@ if distance_to_object(argument0) >= argument1 && mp_grid_path(global.grid, path,
   var path_x = path_get_point_x(path, 1);
   var path_y = path_get_point_y(path, 1);
 
-  var pdir = point_direction(x, y, path_x, path_y);
+  pdir = point_direction(x, y, path_x, path_y);
   var force = argument2;
   var vx = lengthdir_x(force, pdir);
   var vy = lengthdir_y(force, pdir);

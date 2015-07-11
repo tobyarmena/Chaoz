@@ -81,34 +81,20 @@ dir = irandom(359);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Check if enemy can see player or not
-if distance_to_object(obj_player) &lt; 500 &amp;&amp; !collision_line(x,y,obj_player.x,obj_player.y,obj_wall,false,true){
-    attention = true;
-    }
-if hp &lt; hpmax{
-    attention = true;
-    }
+            <string>
 
-//move enemy based on above
-//move enemy based on above
-if attention = true 
-    {
-    if collision_line(x,y,obj_player.x,obj_player.y,obj_parent_wall,false,true)
-        scr_follow(obj_player,0,6000);
-    else 
-        scr_wander(4000);
-    }
 
-//shooting
-if attention = true 
+scr_wander(4000);
+    
+
+
+if attacked = false 
     {
-    if attacked = false 
-            {
-            scr_enemyshoot2(dir);
-            attacked = true
-            alarm[0] = 90;
-            }
-        }
+    scr_enemyshoot2(dir);
+    attacked = true
+    alarm[  0] = 90;
+    }
+        
 
 
 //kills enemy when hp is 0
