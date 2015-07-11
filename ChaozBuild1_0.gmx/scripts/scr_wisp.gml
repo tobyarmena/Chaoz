@@ -10,7 +10,7 @@ if knockback<0{knockback+=1}
 if mouse_check_button(button)&& delay=false 
     {
     delay=true
-    alarm[0]=90
+    alarm[0]=30
     knockback = -10
     //shoot projectile
     projectile=instance_create(xx,yy,obj_wisp_pro)
@@ -21,6 +21,7 @@ if mouse_check_button(button)&& delay=false
         ldx = lengthdir_x(1000,ind.aimdir)
         ldy = lengthdir_y(1000,ind.aimdir)
         physics_apply_impulse(x,y,ldx,ldy)
+        defaultdir=ind.aimdir
         }
     projectile2=instance_create(xx,yy,obj_wisp_pro)
     with(projectile2)
@@ -30,6 +31,7 @@ if mouse_check_button(button)&& delay=false
         ldx = lengthdir_x(1000,ind.aimdir+90)
         ldy = lengthdir_y(1000,ind.aimdir+90)
         physics_apply_impulse(x,y,ldx,ldy)
+        defaultdir=ind.aimdir
         }
     projectile3=instance_create(xx,yy,obj_wisp_pro)
     with(projectile3)
@@ -39,5 +41,6 @@ if mouse_check_button(button)&& delay=false
         ldx = lengthdir_x(1000,ind.aimdir-90)
         ldy = lengthdir_y(1000,ind.aimdir-90)
         physics_apply_impulse(x,y,ldx,ldy)
+        defaultdir=ind.aimdir
         }
     }

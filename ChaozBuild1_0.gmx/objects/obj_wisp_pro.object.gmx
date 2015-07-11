@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>damage = 40;
+            <string>damage = 10;
 mindmg = 40
 maxdmg = 50
 path = path_add();
@@ -52,10 +52,16 @@ path = path_add();
           <argument>
             <kind>1</kind>
             <string>//movement
-if instance_exists(par_enemies) &amp;&amp; distance_to_object(par_enemies) &lt; 500
+if instance_exists(par_enemies) 
     {
-scr_follow(instance_nearest(x,y,par_enemies),0,8000);
-}
+scr_follow(instance_nearest(x,y,par_enemies),0,6000);
+    }
+else
+    {
+    ldx = lengthdir_x(500,defaultdir)
+    ldy = lengthdir_y(500,defaultdir)
+    physics_apply_impulse(x,y,ldx,ldy)
+    }
 
 part_particles_create(global.magma3_sys,x+irandom_range(-5,5),y+irandom_range(-5,5),global.magma3_pt,10)
 if distance_to_object(obj_player)&gt;3000{instance_destroy();}
