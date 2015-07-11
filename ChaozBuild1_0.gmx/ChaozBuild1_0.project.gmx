@@ -26,6 +26,8 @@
         <sprite>sprites\spr_minigun_pro</sprite>
         <sprite>sprites\spr_ice_arm</sprite>
         <sprite>sprites\spr_ice_pro</sprite>
+        <sprite>sprites\spr_wisp_arm</sprite>
+        <sprite>sprites\spr_wisp</sprite>
       </sprites>
       <sprites name="cores">
         <sprite>sprites\spr_core1</sprite>
@@ -95,8 +97,6 @@
     <sprite>sprites\spr_chestbase</sprite>
     <sprite>sprites\spr_randchestspawn</sprite>
     <sprite>sprites\spr_chestcover</sprite>
-    <sprite>sprites\spr_wisp</sprite>
-    <sprite>sprites\spr_wisp_arm</sprite>
     <sprite>sprites\spr_wisp_pu</sprite>
   </sprites>
   <backgrounds name="background">
