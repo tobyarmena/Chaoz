@@ -333,10 +333,10 @@ draw_rectangle(view_xview[0],view_yview[0],view_xview[0]+view_wview[0],view_yvie
 
 draw_set_alpha(1)
 
-//mp_grid_draw(global.grid) 
+/*//mp_grid_draw(global.grid) 
 if global.firstTouch == false
 draw_text(view_xview+400,view_yview+400,"false")
-
+*/
 
 </string>
           </argument>
