@@ -2,8 +2,8 @@ block_size = 18
 v_space = 2
 h_space = 2
 
-v_offset = 0
-h_offset = 0
+v_offset = 750
+h_offset = 1500
 
 draw_set_alpha(1)
 draw_set_font(fnt_inventory)
