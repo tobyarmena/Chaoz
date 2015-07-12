@@ -2,7 +2,7 @@ block_size = 18
 v_space = 2
 h_space = 2
 
-v_offset = 750
+v_offset = 700
 h_offset = 1500
 
 draw_set_alpha(1)
@@ -26,7 +26,7 @@ for(i=0;i<20;i++)
           }
 
         }
-        else if ds_grid_get(global.map,i,j) = 2
+        else if ds_grid_get(global.map,i,j) = 2 && ds_grid_get(global.roomVisit,i,j) = 1
         {
            draw_set_alpha(1)
             draw_sprite_stretched(spr_miniMap,2,view_xview[0]+i*block_size+h_space+h_offset,view_yview[0]+j*block_size+v_space+v_offset,16,16)
@@ -35,7 +35,7 @@ for(i=0;i<20;i++)
         
           else if ds_grid_get(global.map,i,j) = 0
             draw_set_alpha(0)
-           else
+           else if ds_grid_get(global.roomVisit,i,j) = 1
           {
              draw_set_alpha(1)
           draw_sprite_stretched(spr_miniMap,0,view_xview[0]+i*block_size+h_space+h_offset,view_yview[0]+j*block_size+v_space+v_offset,16,16)

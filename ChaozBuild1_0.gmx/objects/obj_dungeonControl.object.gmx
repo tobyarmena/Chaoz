@@ -97,6 +97,10 @@ spawn = ""
 //Variable for difficulty scaling
 global.scale = 1
 
+global.roomVisit = ds_grid_create(width,height);
+
+
+
 </string>
           </argument>
         </arguments>
@@ -189,6 +193,8 @@ if ds_grid_get(global.map,global.playerPos_x+1,global.playerPos_y) &gt; 0 &amp;&
 //Using the updated information, teleport player to the next room with a fading transition
 scr_faderoom(setRoom[global.currentDungeon,global.playerPos_y],xincrease,yincrease,spawn)
 
+//Room Check
+ds_grid_set(global.roomVisit,global.playerPos_x,global.playerPos_y,1)
 
 
 </string>
