@@ -65,7 +65,7 @@ while(i<=amount&&j<=amount*4)
         if i>=amount
             ds_grid_set(global.map,nextx,nexty,2)
         else
-            ds_grid_set(global.map,nextx,nexty,choose(3,4,5,6,7,8,9,10))
+            ds_grid_set(global.map,nextx,nexty,choose(4,5,6,7,8,3,9,10))
         prevx = nextx
         prevy = nexty
         i++
@@ -75,7 +75,7 @@ while(i<=amount&&j<=amount*4)
         if i>=amount
             ds_grid_set(global.map,nextx,nexty,2)
         else
-            ds_grid_set(global.map,nextx,nexty,choose(3,4,5,6,7,8,9,10))
+            ds_grid_set(global.map,nextx,nexty,choose(4,5,6,7,8,3,9,10))
         prevx = nextx
         prevy = nexty
         i++
@@ -138,4 +138,3 @@ global.playerGrid = ds_grid_create(height,width)
 
 global.playerPos_x = global.startx
 global.playerPos_y = global.starty
-

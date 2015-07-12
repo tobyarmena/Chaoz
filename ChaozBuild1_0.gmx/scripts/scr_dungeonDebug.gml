@@ -26,20 +26,18 @@ for(i=0;i<20;i++)
           }
 
         }
-        else if ds_grid_get(global.map,i,j) = 2 && ds_grid_get(global.roomVisit,i,j) = 1
+        else if ds_grid_get(global.map,i,j) = 2 //&& ds_grid_get(global.roomVisit,i,j) = 1
         {
            draw_set_alpha(1)
             draw_sprite_stretched(spr_miniMap,2,view_xview[0]+i*block_size+h_space+h_offset,view_yview[0]+j*block_size+v_space+v_offset,16,16)
         }
-       
-        
-          else if ds_grid_get(global.map,i,j) = 0
-            draw_set_alpha(0)
-           else if ds_grid_get(global.roomVisit,i,j) = 1
+           else if ds_grid_get(global.roomVisit,i,j) = 1 && ds_grid_get(global.map,i,j) > 0 && ds_grid_get(global.map,i,j) != 2
           {
              draw_set_alpha(1)
           draw_sprite_stretched(spr_miniMap,0,view_xview[0]+i*block_size+h_space+h_offset,view_yview[0]+j*block_size+v_space+v_offset,16,16)
             }
+           else if ds_grid_get(global.map,i,j) = 0
+           draw_set_alpha(0)
         //draw_text(view_xview[0]+i*17,view_yview[0]+j*17,ds_grid_get(global.map,i,j))
         //draw_rectangle(view_xview[0]+i*block_size+h_space+h_offset,view_yview[0]+j*block_size+v_space+v_offset,view_xview[0]+(i+1)*block_size+h_offset,view_yview[0]+(j+1)*block_size+v_offset,1)
         }

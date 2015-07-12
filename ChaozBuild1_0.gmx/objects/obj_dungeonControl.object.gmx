@@ -163,6 +163,7 @@ if ds_grid_get(global.map,global.playerPos_x,global.playerPos_y -1) &gt; 0 &amp;
     yincrease = -1
     spawn = "down"
     activatedoor=true
+
 }
 if ds_grid_get(global.map,global.playerPos_x,global.playerPos_y +1) &gt; 0 &amp;&amp; down &amp;&amp; !instance_exists(par_enemies)
 {
@@ -194,7 +195,14 @@ if ds_grid_get(global.map,global.playerPos_x+1,global.playerPos_y) &gt; 0 &amp;&
 scr_faderoom(setRoom[global.currentDungeon,global.playerPos_y],xincrease,yincrease,spawn)
 
 //Room Check
+if !instance_exists(par_enemies)
+{
 ds_grid_set(global.roomVisit,global.playerPos_x,global.playerPos_y,1)
+ds_grid_set(global.roomVisit,global.playerPos_x+1,global.playerPos_y,1)
+ds_grid_set(global.roomVisit,global.playerPos_x-1,global.playerPos_y,1)
+ds_grid_set(global.roomVisit,global.playerPos_x,global.playerPos_y+1,1)
+ds_grid_set(global.roomVisit,global.playerPos_x,global.playerPos_y-1,1)
+}
 
 
 </string>
