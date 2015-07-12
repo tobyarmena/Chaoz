@@ -139,4 +139,3 @@ global.playerGrid = ds_grid_create(height,width)
 global.playerPos_x = global.startx
 global.playerPos_y = global.starty
 
-

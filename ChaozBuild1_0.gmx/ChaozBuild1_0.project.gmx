@@ -99,6 +99,9 @@
     <sprite>sprites\spr_randchestspawn</sprite>
     <sprite>sprites\spr_chestcover</sprite>
     <sprite>sprites\spr_wisp_pu</sprite>
+    <sprite>sprites\spr_menu</sprite>
+    <sprite>sprites\spr_resume</sprite>
+    <sprite>sprites\spr_exit</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -162,6 +165,8 @@
       <script>scripts\scr_item_pickup.gml</script>
     </scripts>
     <script>scripts\scr_deal_damage.gml</script>
+    <script>scripts\scr_pause.gml</script>
+    <script>scripts\scr_unpause.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_harrington</font>
@@ -288,6 +293,9 @@
     <object>objects\obj_parent_chest</object>
     <object>objects\obj_door2</object>
     <object>objects\obj_music</object>
+    <object>objects\obj_parent_button</object>
+    <object>objects\obj_resume</object>
+    <object>objects\obj_exit</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Dungeon 0">

@@ -47,9 +47,9 @@ for(i=0;i&lt;=29;i++)
             var pointx = mouse_x+10;
             var pointy = mouse_y+10;
             
-            draw_set_alpha(0.4)
+            draw_set_alpha(0.5)
             draw_rectangle_colour(pointx,pointy,pointx+max(string_width(global.inventory[i,3]),string_width(global.inventory[i,0])),pointy+string_height(global.inventory[i,3])+string_height(global.inventory[i,0]),c_gray,c_gray,c_gray,c_gray,false)
-            draw_set_alpha(0.9)
+            draw_set_alpha(1)
             
             draw_set_font(fnt_inventory)
             draw_set_halign(fa_left);

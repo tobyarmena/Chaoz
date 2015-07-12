@@ -62,6 +62,12 @@ script_execute(global.inventory[25,5])
             <string>x = obj_player.x;
 y = obj_player.y;
 image_angle=obj_player.direction;
+
+if global.paused == true
+    {
+    x = x-view_xview[0];  
+    y = y-view_yview[0];
+    }
 draw_self();
 </string>
           </argument>

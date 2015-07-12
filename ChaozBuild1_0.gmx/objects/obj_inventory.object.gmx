@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>window_set_cursor(cr_none); 
+            <string>global.paused = false
+
+window_set_cursor(cr_none); 
 
 //variables
 global.camerax = 0
@@ -159,6 +161,52 @@ global.items[7,3] = "Projectiles follow a guided path"
 global.items[7,4] = spr_wisp_pu
 global.items[7,5] = scr_wisp
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>game_end()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_unpause();
 </string>
           </argument>
         </arguments>
@@ -428,31 +476,6 @@ for(i=0;i&lt;=24;i+=1)
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="27">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>room_goto(room_start_0)
-if room=room_start_0
-game_end()
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -472,14 +495,18 @@ game_end()
             <kind>1</kind>
             <string>x = view_xview+320
 y = view_yview+64
-
-if(global.showinv==true) 
+if global.paused == true
     {
-    if (surface_exists(surf)){draw_surface(surf, view_xview[0], view_yview[0]);}      
+    if (surface_exists(surf)){draw_surface(surf, view_xview[0], view_yview[0]);}
     draw_set_color(c_black);
-    draw_set_alpha(0.9);
+    draw_set_alpha(0.5);
     draw_rectangle(view_xview[0],view_yview[0],view_xview[0]+view_wview[0],view_yview[0]+view_hview[0],0);
     draw_set_alpha(1);
+    }
+
+
+if(global.showinv==true) 
+    {      
     draw_sprite(spr_inventory,0,x,y);
     }
 
@@ -509,58 +536,21 @@ if(global.showinv==true)
             <string>
 if(global.showinv==true)
     {
-    window_set_cursor(cr_none); 
-    physics_pause_enable(false);
-    surface_free(surf);
-    global.showinv=false;
-    instance_activate_all()
-    part_system_automatic_update(global.magma_sys, true);
-    part_system_automatic_update(global.magma2_sys, true);
-    part_system_automatic_update(global.magma3_sys, true);
-    for(i=0;i&lt;=maxInvSlots;i+=1)
-        {
-        with(global.slot[i])
-        instance_destroy();   
-        }
-    with(obj_deleteslot)
-        instance_destroy();
+    window_mouse_set(mousex,mousey)
+    alarm[1]=1
     }
 else if (global.showinv==false)
     {
-    window_set_cursor(cr_default); 
-    global.camerax = obj_camera.x
-    global.cameray = obj_camera.y
-    surf = surface_create(view_wview[0],view_hview[0]);   
-    surface_set_target(surf);
-    draw_clear_alpha(c_red, 0); // Clears surface.
-    view_surface_id[0] = surf; // This makes it so everything in view 0 will be drawn to the surface.
-    //draw_background_tiled(background_index[0], 0, 0);    
-    draw_sprite(spr_player,0,123,123)
-    with(all) 
-        {
-        x = x-view_xview[0];  
-        y = y-view_yview[0];  
-        event_perform(ev_draw,0);
-        x = x+view_xview[0];  
-        y = y+view_yview[0];
-        }   
-    view_surface_id[0] = -1; // Resets to draw back to view for later.
-    surface_reset_target();
-    visible = true;
+    scr_pause()
     
     
     
-    global.showinv=true;
-    instance_deactivate_all(true);
-    physics_pause_enable(true);  
+    
+    global.showinv=true;  
     instance_activate_object(obj_drawitems);
-    instance_activate_object(obj_camera);
-    part_system_automatic_update(global.magma_sys, false);
-    part_system_automatic_update(global.magma2_sys, false);
-    part_system_automatic_update(global.magma3_sys, false);
+    
 
-    x = x-view_xview[0];  
-    y = y-view_yview[0];
+    
     
     instance_create(x+608,y+192,global.slot[0])
     instance_create(x+608,y+320,global.slot[1])
@@ -594,7 +584,47 @@ else if (global.showinv==false)
     instance_create(x+320,y+640,global.slot[29])
     instance_create(x+864,y+832,obj_deleteslot)
     
+    
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.paused == true 
+    {
+    window_mouse_set(mousex,mousey)
+    alarm[1]=1
+    }
+else if global.paused == false
+    {
+    scr_pause()
+    instance_create(view_xview+view_wview/2-128,view_yview+view_hview/2-64,obj_resume)
+    instance_create(view_xview+view_wview/2-128,view_yview+view_hview/2,obj_exit)
+    }
+
+
+/*
+room_goto(room_start_0)
+if room=room_start_0
+game_end()
 </string>
           </argument>
         </arguments>

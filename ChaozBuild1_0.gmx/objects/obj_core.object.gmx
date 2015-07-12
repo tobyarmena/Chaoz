@@ -28,6 +28,12 @@
             <string>x = obj_player.x+lengthdir_x(7,obj_player.direction);
 y = obj_player.y+lengthdir_y(7,obj_player.direction);
 image_angle=obj_player.direction;
+
+if global.paused == true
+    {
+    x = x-view_xview[0];  
+    y = y-view_yview[0];
+    }
 draw_self();
 </string>
           </argument>

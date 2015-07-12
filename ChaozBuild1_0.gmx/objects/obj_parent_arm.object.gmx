@@ -135,6 +135,11 @@ if global.action = 2
 {
 x = obj_player.x+lengthdir_x(34,obj_player.direction+90*dir)+lengthdir_x(16+knockback,obj_player.direction);
 y = obj_player.y+lengthdir_y(34,obj_player.direction+90*dir)+lengthdir_y(16+knockback,obj_player.direction);
+if global.paused == true
+    {
+    x = x-view_xview[0];  
+    y = y-view_yview[0];
+    }
 }
 image_angle=aimdir;
 draw_sprite_ext(sprite_index,image_index,x,y,1,dir,image_angle,c_white,1)
@@ -154,6 +159,9 @@ if global.action = 2
         }
     
     }
+    
+
+
 
 
 </string>

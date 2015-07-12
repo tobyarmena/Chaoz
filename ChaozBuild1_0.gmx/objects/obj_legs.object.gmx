@@ -287,6 +287,12 @@ if global.action = 0 || global.action = 2
             <string>x = obj_player.x+lengthdir_x(16,obj_player.direction);
 y = obj_player.y+lengthdir_y(16,obj_player.direction);
 image_angle=direction;
+
+if global.paused == true
+    {
+    x = x-view_xview[0];  
+    y = y-view_yview[0];
+    }
 draw_self();
 </string>
           </argument>
