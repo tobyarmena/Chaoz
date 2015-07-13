@@ -44,4 +44,3 @@ part_system_automatic_update(global.wisp_sys, false);
 //if global.showinv == true
 //surface_free(surf);
 
-

@@ -13,4 +13,3 @@ with(all)
     }   
 view_surface_id[0] = -1; // Resets to draw back to view for later.
 surface_reset_target();
-
