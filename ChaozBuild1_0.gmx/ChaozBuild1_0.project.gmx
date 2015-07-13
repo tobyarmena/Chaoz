@@ -103,6 +103,17 @@
     <sprite>sprites\spr_menu</sprite>
     <sprite>sprites\spr_resume</sprite>
     <sprite>sprites\spr_exit</sprite>
+    <sprite>sprites\spr_settings</sprite>
+    <sprite>sprites\spr_back</sprite>
+    <sprite>sprites\spr_checkbox</sprite>
+    <sprite>sprites\spr_1024x768</sprite>
+    <sprite>sprites\spr_1280x960</sprite>
+    <sprite>sprites\spr_1280x1024</sprite>
+    <sprite>sprites\spr_1600x1000</sprite>
+    <sprite>sprites\spr_1600x1200</sprite>
+    <sprite>sprites\spr_1920x1080</sprite>
+    <sprite>sprites\spr_1920x1200</sprite>
+    <sprite>sprites\spr_fullscreen</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -168,6 +179,7 @@
     <script>scripts\scr_deal_damage.gml</script>
     <script>scripts\scr_pause.gml</script>
     <script>scripts\scr_unpause.gml</script>
+    <script>scripts\scr_redraw.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_harrington</font>
@@ -297,6 +309,17 @@
     <object>objects\obj_parent_button</object>
     <object>objects\obj_resume</object>
     <object>objects\obj_exit</object>
+    <object>objects\obj_settings</object>
+    <object>objects\obj_back</object>
+    <object>objects\obj_r1920x1080</object>
+    <object>objects\obj_r1280x960</object>
+    <object>objects\obj_r1600x1000</object>
+    <object>objects\obj_r1600x1200</object>
+    <object>objects\obj_r1280x1024</object>
+    <object>objects\obj_r1920x1200</object>
+    <object>objects\obj_r1024x768</object>
+    <object>objects\obj_fullscreen</object>
+    <object>objects\obj_resolution</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Dungeon 0">

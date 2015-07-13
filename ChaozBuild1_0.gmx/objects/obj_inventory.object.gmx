@@ -25,9 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.paused = false
+            <string>//menu variables
+global.paused = false
+global.menupage = "null"
 
 window_set_cursor(cr_none); 
+
+//resolution variables
+global.fullscreen = true
+global.reschange = false
+global.width = 1920
+global.height = 1080
+
+
 
 //variables
 global.camerax = 0
@@ -469,8 +479,114 @@ for(i=0;i&lt;=24;i+=1)
     else
         global.full = true
     }
+
+//Menu Buttons
+if global.paused == false
+    {
+    global.menupage = "null"
+    }
+
+if global.menupage == "main"
+    {
+    if !instance_exists(obj_resume) &amp;&amp; !instance_exists(obj_exit)
+        {
+        with obj_parent_button
+            {
+            instance_destroy()
+            }
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview/2-128,obj_resume)
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview/2-64,obj_settings)
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview/2,obj_exit)
+        }
+    }
+if global.menupage == "settings"
+    {
+    if !instance_exists(obj_back)
+        {
+        with obj_parent_button
+            {
+            instance_destroy()
+            }
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256,obj_back)
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-64,obj_r1920x1080)
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-128,obj_r1920x1200)
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-192,obj_r1600x1200)
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-256,obj_r1600x1000)
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-320,obj_r1280x1024)
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-384,obj_r1280x960)
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-448,obj_r1024x768)
+        instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-512,obj_fullscreen)
+        }
+    }
+else if global.menupage == "null"
+    {
+    
+    }
+    
+//Change Resolution
+if global.reschange == true
+    {
+    view_wport[0] = global.width
+    view_hport[0] = global.height
+    view_wview[0] = global.width
+    view_hview[0] = global.height
+    surface_resize(application_surface,global.width,global.height);
+    window_set_size(global.width,global.height);
+    display_set_gui_size(global.width,global.height); 
+    if global.fullscreen == true{window_set_fullscreen(true)}else{window_set_fullscreen(false)}
+    global.reschange = false
+    }
+    
+   
+
     
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string> window_set_fullscreen(false);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.reschange=true
 </string>
           </argument>
         </arguments>
@@ -493,8 +609,8 @@ for(i=0;i&lt;=24;i+=1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = view_xview+320
-y = view_yview+64
+            <string>x = view_xview+view_wview/2-640
+y = view_yview+view_hview/2-480
 if global.paused == true
     {
     if (surface_exists(surf)){draw_surface(surf, view_xview[0], view_yview[0]);}
@@ -612,12 +728,12 @@ else if (global.showinv==false)
     {
     window_mouse_set(mousex,mousey)
     alarm[1]=1
+    global.menupage="null"
     }
 else if global.paused == false
     {
     scr_pause()
-    instance_create(view_xview+view_wview/2-128,view_yview+view_hview/2-64,obj_resume)
-    instance_create(view_xview+view_wview/2-128,view_yview+view_hview/2,obj_exit)
+    global.menupage="main"
     }
 
 

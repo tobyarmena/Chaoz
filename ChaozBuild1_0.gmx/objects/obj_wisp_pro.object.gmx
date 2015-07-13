@@ -29,6 +29,7 @@
 maxdmg = 20
 path = path_add();
 //image_blend=c_red
+pdir=0
 </string>
           </argument>
         </arguments>
