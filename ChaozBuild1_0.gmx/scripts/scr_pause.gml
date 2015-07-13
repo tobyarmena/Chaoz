@@ -1,7 +1,7 @@
 global.paused = true
 
-mousex = mouse_x - view_xview[0]
-mousey = mouse_y - view_yview[0]
+mousex = window_mouse_get_x() 
+mousey = window_mouse_get_y() 
 window_mouse_set(1000,500)
 
 window_set_cursor(cr_default);
@@ -43,4 +43,3 @@ part_system_automatic_update(global.wisp_sys, false);
 
 //if global.showinv == true
 //surface_free(surf);
-
