@@ -54,16 +54,17 @@
       <sprite>sprites\spr_magma_pu</sprite>
       <sprite>sprites\spr_minigun_pu</sprite>
       <sprite>sprites\spr_ice_pu</sprite>
+      <sprite>sprites\spr_wisp_pu</sprite>
       <sprite>sprites\spr_skull_marked_pu</sprite>
       <sprite>sprites\spr_skull_eye_pu</sprite>
       <sprite>sprites\spr_skull_hell_pu</sprite>
       <sprite>sprites\spr_skull_broken_pu</sprite>
     </sprites>
-    <sprite>sprites\spr_wisp_pt</sprite>
     <sprites name="particles">
       <sprite>sprites\spr_magma_part</sprite>
       <sprite>sprites\spr_ice_part</sprite>
       <sprite>sprites\spr_ice_part2</sprite>
+      <sprite>sprites\spr_wisp_pt</sprite>
     </sprites>
     <sprites name="enemy">
       <sprite>sprites\spr_enemy</sprite>
@@ -92,28 +93,33 @@
       </sprites>
       <sprite>sprites\spr_wall</sprite>
     </sprites>
+    <sprites name="GUI">
+      <sprites name="Pause">
+        <sprite>sprites\spr_exit</sprite>
+        <sprite>sprites\spr_settings</sprite>
+        <sprite>sprites\spr_back</sprite>
+        <sprite>sprites\spr_menu</sprite>
+        <sprite>sprites\spr_resume</sprite>
+        <sprite>sprites\spr_fullscreen</sprite>
+        <sprite>sprites\spr_1024x768</sprite>
+        <sprite>sprites\spr_1280x1024</sprite>
+        <sprite>sprites\spr_1920x1200</sprite>
+        <sprite>sprites\spr_1280x960</sprite>
+        <sprite>sprites\spr_1600x1000</sprite>
+        <sprite>sprites\spr_1600x1200</sprite>
+        <sprite>sprites\spr_1920x1080</sprite>
+      </sprites>
+      <sprites name="Cursor">
+        <sprite>sprites\spr_mouse</sprite>
+        <sprite>sprites\spr_cursor</sprite>
+      </sprites>
+    </sprites>
     <sprite>sprites\spr_rndspwn</sprite>
-    <sprite>sprites\spr_empty</sprite>
-    <sprite>sprites\spr_cursor</sprite>
-    <sprite>sprites\spr_mouse</sprite>
     <sprite>sprites\spr_chestbase</sprite>
+    <sprite>sprites\spr_empty</sprite>
     <sprite>sprites\spr_randchestspawn</sprite>
     <sprite>sprites\spr_chestcover</sprite>
-    <sprite>sprites\spr_wisp_pu</sprite>
-    <sprite>sprites\spr_menu</sprite>
-    <sprite>sprites\spr_resume</sprite>
-    <sprite>sprites\spr_exit</sprite>
-    <sprite>sprites\spr_settings</sprite>
-    <sprite>sprites\spr_back</sprite>
     <sprite>sprites\spr_checkbox</sprite>
-    <sprite>sprites\spr_1024x768</sprite>
-    <sprite>sprites\spr_1280x960</sprite>
-    <sprite>sprites\spr_1280x1024</sprite>
-    <sprite>sprites\spr_1600x1000</sprite>
-    <sprite>sprites\spr_1600x1200</sprite>
-    <sprite>sprites\spr_1920x1080</sprite>
-    <sprite>sprites\spr_1920x1200</sprite>
-    <sprite>sprites\spr_fullscreen</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
