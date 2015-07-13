@@ -514,7 +514,7 @@ if global.menupage == "settings"
         instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-256,obj_r1600x1000)
         instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-320,obj_r1280x1024)
         instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-384,obj_r1280x960)
-        instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-448,obj_r1024x768)
+        //instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-448,obj_r1024x768)
         instance_create(view_xview+view_wview/2-128,view_yview+view_hview-256-512,obj_fullscreen)
         }
     }
@@ -542,7 +542,8 @@ if global.reschange == true
     else
         {
         window_set_fullscreen(false)
-        window_set_size(global.width*0.8,global.height*0.8);
+        window_set_size(global.width*0.9,global.height*0.9);
+        window_set_position(10,30)
         }
     global.reschange = false
     }
